@@ -71,7 +71,7 @@ export default function Home() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyPress}
-            placeholder="Envie uma mensagem para o ChatFut"
+            placeholder="Envie uma mensagem para o ChatFUT"
             className={styles.input}
           />
           <button onClick={sendMessage} className={styles.sendButton}>
@@ -90,6 +90,7 @@ export default function Home() {
           <span className={styles.footerItem}>Impedimentos</span>
           <span className={styles.footerItem}>Estádio</span>
           <span className={styles.footerItem}>Vencedor</span>
+          <span className={styles.footerItem}>Chutes</span>
         </div>
 
         <div className={styles.informationContainer}>

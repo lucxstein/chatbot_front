@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "ChatFut",
+  title: "ChatFUT",
   description: "Chatbot para responder perguntas sobre jogos do campeonato brasileiro de 2020 até 2023.",
 };
 
