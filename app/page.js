@@ -113,10 +113,11 @@ export default function Home() {
                   nova pergunta.
                 </li>
                 <li>Seja claro e forneça detalhes do que gostaria de saber.</li>
+                <li>Alguns jogos da temporada/ano 2020 aconteceram no início de 2021, devido interrupção do campeonato.</li>
                 <li>
                   Exemplo de pergunta: Quantos escanteios tiveram para cada time
                   no jogo entre Palmeiras e Flamengo em 8 de julho de 2023?
-                </li>
+                </li>                 
               </ul>
             </div>
           </div>
