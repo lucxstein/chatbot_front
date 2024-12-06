@@ -41,6 +41,13 @@ export default function Home() {
     setInput("");
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      sendMessage();
+    }
+  };
+
   return (
     <div className={styles.body}>
       
@@ -63,6 +70,7 @@ export default function Home() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleKeyPress}
             placeholder="Envie uma mensagem para o ChatFut"
             className={styles.input}
           />
@@ -84,32 +92,52 @@ export default function Home() {
           <span className={styles.footerItem}>Vencedor</span>
         </div>
 
-      <div className={styles.informationContainer}>
-        <div className={styles.rulesContainer}>
-          <span className={styles.rulesTitle}>Regras de interação</span>
-          <span className={styles.rulesTrigger}>?</span>
-          <div className={styles.rulesTooltip}>            
-            <ul>
-              <li>As perguntas devem ser sobre jogos do campeonato brasileiro dos anos de 2020 até 2023.</li>
-              <li>O formato das datas no banco de dados consultado estão como DD-MM-AAAA.</li>
-              <li>O chat não está configurado para lembrar de respostas anteriores, é necessário informar todos os detalhes a cada nova pergunta.</li>
-              <li>Seja claro e forneça detalhes do que gostaria de saber.</li>
-              <li>Exemplo de pergunta: Quantos escanteios tiveram para cada time no jogo entre Palmeiras e Flamengo em 8 de julho de 2023?</li>
-            </ul>
+        <div className={styles.informationContainer}>
+          <div className={styles.rulesContainer}>
+            <span className={styles.rulesTitle}>Regras de interação</span>
+            <span className={styles.rulesTrigger}>?</span>
+            <div className={styles.rulesTooltip}>
+              <ul>
+                <li>
+                  As perguntas devem ser sobre jogos do campeonato brasileiro
+                  dos anos de 2020 até 2023.
+                </li>
+                <li>
+                  O formato das datas no banco de dados consultado estão como
+                  DD-MM-AAAA.
+                </li>
+                <li>
+                  O chat não está configurado para lembrar de respostas
+                  anteriores, é necessário informar todos os detalhes a cada
+                  nova pergunta.
+                </li>
+                <li>Seja claro e forneça detalhes do que gostaria de saber.</li>
+                <li>
+                  Exemplo de pergunta: Quantos escanteios tiveram para cada time
+                  no jogo entre Palmeiras e Flamengo em 8 de julho de 2023?
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className={styles.disclaimerContainer}>
+            <span className={styles.disclaimerTitle}>Disclaimer</span>
+            <span className={styles.disclaimerTrigger}>?</span>
+            <div className={styles.disclaimerTooltip}>
+              <ul>
+                <li>
+                  Este chatbot utiliza um banco de dados que, apesar de conter
+                  informações reais, possui caráter experimental e é destinado
+                  exclusivamente para demonstração. Por esse motivo, as
+                  informações podem estar incompletas, imprecisas ou conter
+                  erros, incluindo possíveis alucinações geradas pelas
+                  respostas. Recomendamos que você não tome decisões importantes
+                  com base nas informações apresentadas aqui.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        <div className={styles.disclaimerContainer}>
-          <span className={styles.disclaimerTitle}>Disclaimer</span>
-          <span className={styles.disclaimerTrigger}>?</span>
-          <div className={styles.disclaimerTooltip}>            
-            <ul>
-              <li>Este chatbot utiliza um banco de dados que, apesar de conter informações reais, possui caráter experimental e é destinado exclusivamente para demonstração. Por esse motivo, as informações podem estar incompletas, imprecisas ou conter erros, incluindo possíveis "alucinações" geradas pelas respostas. Recomendamos que você não tome decisões importantes com base nas informações apresentadas aqui.</li>                      
-            </ul>
-          </div>
-        </div>
-      </div>
-
       </div>
     </div>
   );
